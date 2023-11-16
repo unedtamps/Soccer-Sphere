@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#searching-sec {
+    padding-top: 4rem;
+    margin: 0 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: 'Acme', sans-serif;
+}
+
+#searching-sec label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 1rem;
+}
+
+#news {
+    margin: 0 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.navbar-nav {
+    font-family: 'Righteous', sans-serif;
+}
+
+.brand {
+    font-family: 'Rowdies', sans-serif;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+}
+
+.prev-news {
+    margin: 0 0 0 0;
+}
+
+#container-prev {
+    margin-top: 0;
+}
+
+.container-news {
+    display: block;
+    margin: 0 2rem 0 2rem;
+}
+
+#title-bar {
+    position: absolute;
+    background-color: azure;
+    padding: 1rem 2rem;
+    display: none;
+    top: 9.5rem;
+}
+
+#title-bar h4 {
+    font-size: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+.q-title-bar {
+    font-family: 'Merriweather Sans', sans-serif;
+    gap: 1rem;
+}
+
+.q-title-bar img {
+    width: 20%;
+    border-radius: 0.4rem;
+    display: inline;
+}
+
+.query-title {
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.query-title p {
+    display: inline;
+    font-size: 12px;
+    font-weight: 100;
+    margin-left: 0rem;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+.navbar {
+    box-shadow: rgba(46, 162, 240, 0.4) 0px 5px, rgba(46, 195, 240, 0.3) 0px 10px, rgba(46, 124, 240, 0.2) 0px 15px, rgba(46, 240, 101, 0.1) 0px 20px, rgba(201, 46, 240, 0.05) 0px 25px;
+    border-radius: 0.7rem;
+}
+
+.input-user {
+    max-width: 50rem;
+    width: 100%;
+    border-radius: 4rem;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    padding: 0.5rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.sub-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.author {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.date {
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-bottom: 1.7rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.tag {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: blue;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    max-width: 60rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.separate {
+    margin: 2rem 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.411);
+}
+
+
+
+.paragraf {
+    text-align: justify;
+    margin: 0 1rem 1.2rem 1.2rem;
+    padding-top: 1rem;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.paragraf h3 {
+    font-weight: bold;
+    font-family: 'Acme', sans-serif;
+    font-size: 2rem;
+    margin: 2rem 0 0.5rem 0;
+}
+
+footer {
+    font-family: 'Josefin Sans', sans-serif;
+    gap: 0;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+footer p {
+    margin: 2px;
+    font-size: 14px;
+}
+
+@media only screen and (min-width : 500px) {
+    .input-user {
+        padding: 0.6rem 3rem;
+    }
+
+    .paragraf {
+        margin: 2rem 5rem 0rem 5rem;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .paragraf h3 {
+        font-size: 3rem;
+        margin: 2rem 0 0.5rem 0;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        margin-bottom: 0rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .sub-title {
+        font-size: 20px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+    }
+
+    .author {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .date {
+        font-family: 'Merriweather Sans', sans-serif;
+        margin-bottom: 1.7rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .tag {
+        font-size: 15px;
+    }
+
+    #title-bar {
+        position: absolute;
+        top: 11rem;
+        width: 60%;
+        border-radius: 1rem;
+    }
+
+    .q-title-bar {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .query-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .q-title-bar p {
+        display: block;
+        text-align: center;
+    }
+
+    .q-title-bar img {
+        width: 7rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: 0.4rem;
+        display: block;
+    }
+
+    #searching-sec label {
+        font-size: 25px;
+        margin-bottom: 1rem;
+    }
+
+    footer p {
+        margin: 2px;
+        font-size: 1.5rem;
+    }
+}
