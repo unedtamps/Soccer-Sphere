@@ -1,4 +1,4 @@
-# SoccerSphare
+# SoccerSphere
 
 Simple web article all about soccer and football
 
