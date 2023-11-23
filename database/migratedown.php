@@ -1,4 +1,5 @@
 <?php
+define('includeDB', true);
 include("db.php");
 $request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
 $php_self = isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : '';
@@ -13,5 +14,5 @@ $conn = conn();
 if ($conn->query($down)) {
     error_log("succes to migrate");
 } else {
-    die("Failed to create news table: " . $conn->error);
+    error_log("Failed to create news table: " . $conn->error);
 }

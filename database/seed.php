@@ -1,4 +1,5 @@
 <?php
+define('includeDB', true);
 include("db.php");
 $request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
 $php_self = isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : '';
