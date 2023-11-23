@@ -1,4 +1,5 @@
 <?php
+define('includeQuery', true);
 include("./database/query.php");
 $res = findAll();
 for ($i = 0; $i < count($res); $i++) {
@@ -44,7 +45,7 @@ if ($action === "delete") {
           <a class="nav-link q-category active pointer" aria-current="page" category="europa">Europa</a>
           <a class="nav-link q-category active pointer" aria-current="page" category="asia">Asia</a>
           <a class="nav-link q-category active pointer" aria-current="page" category="general">General</a>
-          <a class="nav-link q-category active pointer" href="./views/post.php" aria-current="page" category="general">Create Article</a>
+          <a class="nav-link q-category active pointer" href="./views/post.php?title_page" aria-current="page" category="general">Create Article</a>
         </div>
         <div class="navbar-nav gap-sm-5 pb-2 pb-sm-0">
           <button class="btn btn-success active px-4 mb-3 mt-2 mt-sm-0 mb-sm-0" aria-current="page" href="#">

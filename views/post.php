@@ -1,4 +1,5 @@
 <?php
+define('includeQuery', true);
 include('../database/query.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'Edit Article') {
     $title = $_POST['title'];
