@@ -194,6 +194,28 @@ footer {
     margin-bottom: 1rem;
     margin-left: 1rem;
 }
+.edit-container {
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+.edit-button{
+    text-decoration: none;
+    border-radius: 2rem;
+    color: white;
+    background-color: blue;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem 0.5rem 2rem ;
+}
+.delete-button{
+    border-radius: 2rem;
+    text-decoration: none;
+    color: white;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    background-color: red;
+    font-weight: bold;
+    padding: 0.5rem 2rem 0.5rem 2rem ;
+}
 
 footer p {
     margin: 2px;

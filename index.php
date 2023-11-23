@@ -4,9 +4,22 @@ $res = findAll();
 for ($i = 0; $i < count($res); $i++) {
   $res[$i]['paragraf'] = explode('*', $res[$i]['paragraf']);
 }
+$action = isset($_GET['action']) ? $_GET['action'] : null;
+if ($action === "delete") {
+  $id = isset($_GET['id']) ? $_GET['id'] : null;
+  $img_url = isset($_GET['img_url']) ? $_GET['img_url'] : null;
+  $err = DeleteOneArticle(intval($id));
+  if ($err != null) {
+    echo '<script>alert("Sorry, there was an error deleting aricle:' . $err . '");</script>';
+  }
+  unlink($img_url);
+  header('Location: ' . strtok($_SERVER["REQUEST_URI"], '?'));
+  exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +44,7 @@ for ($i = 0; $i < count($res); $i++) {
           <a class="nav-link q-category active pointer" aria-current="page" category="europa">Europa</a>
           <a class="nav-link q-category active pointer" aria-current="page" category="asia">Asia</a>
           <a class="nav-link q-category active pointer" aria-current="page" category="general">General</a>
+          <a class="nav-link q-category active pointer" href="./views/post.php" aria-current="page" category="general">Create Article</a>
         </div>
         <div class="navbar-nav gap-sm-5 pb-2 pb-sm-0">
           <button class="btn btn-success active px-4 mb-3 mt-2 mt-sm-0 mb-sm-0" aria-current="page" href="#">
@@ -139,6 +153,24 @@ for ($i = 0; $i < count($res); $i++) {
         );
         prevNews.append('<h3 class="author">' + item.author + "</h3>");
         prevNews.append('<h4 class="date">' + item.date_time + "</h4>");
+        let editCon = $("<div class=edit-container></div>");
+        editCon.append(
+          $("<a/>", {
+            class: "edit-button",
+            text: "Edit",
+            id: item.id,
+            href: `./views/post.php?title_page=Edit%20Article&id=${item.id}`,
+          })
+        );
+        editCon.append(
+          $("<a/>", {
+            class: "delete-button",
+            text: "Delete",
+            id: item.id,
+            href: `index.php?action=delete&id=${item.id}&img_url=${item.image_url}`
+          })
+        )
+        prevNews.append(editCon)
         prevNews.append(
           '<img src="' +
           item.image_url +
@@ -200,27 +232,27 @@ for ($i = 0; $i < count($res); $i++) {
         }, "fast");
       });
 
-        $(".query-title").click(function() {
-          $("#container-prev").css("display", "none");
-          let selId = $(this).attr("data_id");
-          let selData = data.find((item) => item.id == selId);
-          if (selData) {
-            $(".paragraf").empty();
-            $(".title").text(selData.title);
-            $(".sub-title").text(selData.sub_title);
-            $(".tag").text("#" + selData.category);
-            $(".author").text(selData.author);
-            $(".date").text(selData.date_time);
-            $(".image").attr("src", selData.image_url);
-            selData.paragraf.forEach((pr) => {
-              $(".paragraf").append("<p>" + pr + "</p>");
-            });
-          }
-          $("html, body").animate({
-            scrollTop: 0
-          }, "fast");
-        });
+      $(".query-title").click(function() {
+        $("#container-prev").css("display", "none");
+        let selId = $(this).attr("data_id");
+        let selData = data.find((item) => item.id == selId);
+        if (selData) {
+          $(".paragraf").empty();
+          $(".title").text(selData.title);
+          $(".sub-title").text(selData.sub_title);
+          $(".tag").text("#" + selData.category);
+          $(".author").text(selData.author);
+          $(".date").text(selData.date_time);
+          $(".image").attr("src", selData.image_url);
+          selData.paragraf.forEach((pr) => {
+            $(".paragraf").append("<p>" + pr + "</p>");
+          });
+        }
+        $("html, body").animate({
+          scrollTop: 0
+        }, "fast");
       });
+    });
   </script>
 </body>
 
